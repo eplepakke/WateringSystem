@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.newtonbox.wateringsystem">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".WateringApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.plantdetails.EditPlantActivity"
+            android:parentActivityName=".ui.plantdetails.PlantInfoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.plantdetails.PlantInfoActivity" />
+        </activity>
+        <activity
+            android:name=".ui.plantdetails.AddPlantActivity"
+            android:parentActivityName=".ui.plantlist.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.plantlist.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.history.PumpStateDetailsActivity"
+            android:parentActivityName=".ui.plantdetails.PlantInfoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.plantdetails.PlantInfoActivity" />
+        </activity>
+        <activity
+            android:name=".ui.history.WaterLevelDetailsActivity"
+            android:parentActivityName=".ui.plantdetails.PlantInfoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.plantdetails.PlantInfoActivity" />
+        </activity>
+        <activity
+            android:name=".ui.history.SoilMoistureDetailsActivity"
+            android:parentActivityName=".ui.plantdetails.PlantInfoActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.plantdetails.PlantInfoActivity" />
+        </activity>
+        <activity
+            android:name=".ui.plantdetails.PlantInfoActivity"
+            android:parentActivityName=".ui.plantlist.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.plantlist.MainActivity" />
+        </activity>
+        <activity android:name=".ui.plantlist.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
